@@ -1,69 +1,35 @@
-# \# 2024 U.S. Credit Card Complaint Analysis
+# 2024 U.S. Credit Card Complaint Analysis
 
-# 
-
-# I explored credit card complaints published in the Consumer Financial Protection Bureau (CFPB) database to see which issues appeared most often, how complaint volume changed during 2024, and how companies responded.
-
-# 
-
-# \## Tools I used
-
-# 
-
-# \- \*\*Python, pandas, and Jupyter Notebook:\*\* checked and cleaned the data, then explored complaint patterns.
-
-# \- \*\*Power BI:\*\* created the report visuals from the cleaned CSV.
-
-# 
-
-# \## What I did
-
-# 
-
-# I worked with 75,989 complaint records received in 2024. In Jupyter, I checked for missing values and duplicate complaint IDs. I found no duplicate complaint IDs. I filled 63 missing `sub\_issue` values and 213 missing `state` values with `Unknown`, then exported the cleaned data for Power BI.
-
-# 
-
-# My Power BI report shows the total number of complaints, the 10 most common issues, monthly complaint counts, and company response categories.
-
-# 
-
-# \## What I found
-
-# 
-
-# \- \*\*Problem with a purchase shown on your statement\*\* was the most common issue, with 14,595 complaints (19.21% of the records).
-
-# \- Complaint volume was highest in \*\*August\*\* (7,355) and lowest in \*\*February\*\* (5,182).
-
-# \- \*\*Closed with explanation\*\* was the most common company response category in the report.
-
-# 
-
-# \## Project files
-
-# 
-
-# \- `notebooks/credit\_card\_complaints\_analysis.ipynb` — Python cleaning and analysis
-
-# \- `data/credit\_card\_complaints\_2024.csv` — original data extract
-
-# \- `data/credit\_card\_complaints\_2024\_clean.csv` — cleaned data used in Power BI
-
-# \- `CFPB\_Credit\_Card\_Complaints\_2024.pbix` — Power BI report
-
-# 
-
-# \## Data source
-
-# 
-
-The data comes from the \[CFPB Consumer Complaint Database](https://www.consumerfinance.gov/data-research/consumer-complaints/). I used a downloaded extract filtered to credit card complaints received in 2024. These counts describe published complaints; they do not represent all credit card customers or prove that a complaint was valid.
+I explored published credit card complaints in the Consumer Financial Protection Bureau (CFPB) database to see which issues were most common, how complaint counts changed during 2024, and how companies responded.
 
 ## Power BI report
-===
 
-# 
+![Credit card complaint dashboard](dashboard.png)
 
-# !\[Credit card complaint dashboard](dashboard.png)
+## Tools
 
+- Python, pandas, and Jupyter Notebook for cleaning and exploring the data
+- Power BI for visualization
+
+## What I did
+
+I worked with 75,989 credit card complaint records received in 2024. I checked missing values and duplicate complaint IDs in Jupyter. There were no duplicate complaint IDs. I filled 63 missing `sub_issue` values and 213 missing `state` values with `Unknown`, then exported a cleaned CSV for Power BI.
+
+The report shows the total complaints, 10 most common issues, monthly complaint counts, and company response categories.
+
+## Findings
+
+- The most common issue was "Problem with a purchase shown on your statement": 14,595 complaints, or 19.21% of the records.
+- August had the most complaints (7,355), while February had the fewest (5,182).
+- "Closed with explanation" was the most common company response category.
+
+## Project files
+
+- `notebooks/credit_card_complaints_analysis.ipynb` — cleaning and analysis
+- `data/credit_card_complaints_2024.csv` — original extract
+- `data/credit_card_complaints_2024_clean.csv` — cleaned data
+- `CFPB_Credit_Card_Complaints_2024.pbix` — Power BI report
+
+## Data source
+
+The data is from the [CFPB Consumer Complaint Database](https://www.consumerfinance.gov/data-research/consumer-complaints/). These are counts of published complaints, not rates for all cardholders or proof that a complaint was valid.
